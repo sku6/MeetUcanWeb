@@ -1,32 +1,23 @@
-import React from 'react';
-import logo from './Toucan.png';
+import React, { Component } from "react";
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import './App.css';
+import Homescreen from "./Components/homescreen";
 
-function App() {
-  return (
-    <html className="All">
-      <p className = "Header">
-        MeetUcan
-      </p>
-      <header className="Logo">
-        <img src={logo} 
-          className="App-logo" 
-          alt="logo" 
-        />
-        <p>
-          You can meet with MeetUcan!
-        </p>
-      </header>
-      <div className = "Box">
-        <p>
-          insert code here
-        </p>
-      </div> 
-    <div className = "Bottom">
-
-    </div>
-    </html>
-  );
+class App extends Component {
+  constructor(props) {
+      super(props);
+  }
+  render() {
+    return (
+      <div>
+        <Router>
+          <Switch className="container">
+            <Route path="/" exact component={Homescreen} />
+          </Switch>
+        </Router>
+      </div>
+        );
+    }
 }
 
 export default App;
