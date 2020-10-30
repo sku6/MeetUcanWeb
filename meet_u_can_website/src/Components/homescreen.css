@@ -83,13 +83,19 @@ font-display:auto;font-style:normal;font-weight:400;
     justify-content: center;
 }
 
+::placeholder {
+    color: #468DC6;
+}
+
+
+
 .EnterCode {
     display: flex;
     text-align: center;
     background-color: #9ADBFA;
     margin-left: 500px;
     margin-right: 500px;
-    margin-top: -20px;
+    margin-top: 10px;
     border-radius: 15px;
     color: #468DC6;
     font-family: filson-soft;
@@ -99,12 +105,12 @@ font-display:auto;font-style:normal;font-weight:400;
 }
 
 .Enter {
-    align-items: center;
+    display: flex;
     text-align: center;
     background-color: #BEEDFE;
-    margin-left: 580px;
-    margin-right: 580px;
-    margin-top: -10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
     border-radius: 15px;
     color: #468DC6;
     font-family: filson-soft;
@@ -118,5 +124,9 @@ font-display:auto;font-style:normal;font-weight:400;
     padding-right: 20px;
 }
 .Bottom{
-    padding-bottom: 60px;
+    padding-bottom: 70px;
+}
+
+*:focus {
+    outline: none;
 }

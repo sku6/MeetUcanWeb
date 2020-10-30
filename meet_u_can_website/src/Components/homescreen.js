@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import logo from './Toucan.png';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Redirect } from "react-router-dom";
 import './homescreen.css';
+import FloatingLabel from "floating-label-react";
 
  export default class Homescreen extends Component {
     constructor(props){
@@ -17,8 +18,13 @@ import './homescreen.css';
         this.setState({value: event.target.value});
     }
 
-    handleSubmit(event) {
-        alert('A name was submitted: ' + this.state.value);
+    handleSubmit() {
+        if (this.state.value === "1234") {
+            this.props.history.push("/feed");
+        } else {
+            alert("Invalid");
+        }
+        
     }
 
     render() {
@@ -35,13 +41,10 @@ import './homescreen.css';
                 </div>
                 <div className="EnterCodeDiv">
                     <form onSubmit={this.handleSubmit}>
-                        <input type="text" value={this.state.value} onChange={this.handleChange} className="EnterCode"/>
+                        <input placeholder="insert code here" type="text" value={this.state.value} onChange={this.handleChange} className="EnterCode"/>
                         <input type="submit" value="Enter" className="Enter"/>
                     </form>
                 </div> 
-                <Link to="/feed" className = "Enter">
-                    Enter
-                </Link>
                 <div className = "Bottom"></div>
             </html>
         );
