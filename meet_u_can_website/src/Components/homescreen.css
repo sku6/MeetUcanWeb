@@ -77,21 +77,29 @@ font-display:auto;font-style:normal;font-weight:400;
 .All {
     background-color: #BEEDFE;
 }
+.EnterCodeDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .EnterCode {
-  text-align: center;
-  background-color: #9ADBFA;
-  margin-left: 500px;
-  margin-right: 500px;
-  margin-top: -20px;
-  border-radius: 15px;
-  color: #468DC6;
-  font-family: filson-soft;
-  font-style: normal;
-  font-size: calc(10px + 3vmin);
+    display: flex;
+    text-align: center;
+    background-color: #9ADBFA;
+    margin-left: 500px;
+    margin-right: 500px;
+    margin-top: -20px;
+    border-radius: 15px;
+    color: #468DC6;
+    font-family: filson-soft;
+    font-style: normal;
+    font-size: calc(10px + 3vmin);
+    border-style: hidden;
 }
 
 .Enter {
+    align-items: center;
     text-align: center;
     background-color: #BEEDFE;
     margin-left: 580px;
@@ -105,7 +113,10 @@ font-display:auto;font-style:normal;font-weight:400;
     border-color:#468DC6;
     border-width: 3px;
     border-style: solid;
+    text-decoration: none;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 .Bottom{
-    padding-bottom: 50px;
+    padding-bottom: 60px;
 }
